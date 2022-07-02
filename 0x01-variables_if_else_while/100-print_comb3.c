@@ -7,25 +7,27 @@
 
 int main(void)
 {
-int ch;
-int n;
+int var;
 
-for (ch = 48; ch <= 57; ch++)
+for (var = 0; var < 9; var++)
 {
-for (n = 49; n <= 57; n++)
+int ii;
+for (ii = var + 1; ii < 10; ii++)
 {
-if (n < ch)
+putchar((var % 10) + '0');
+putchar((ii % 10) + '0');
+
+if (var != 8)
 {
-putchar(ch);
-putchar(n);
-if (ch != 56 || n != 57)
-{
-putchar(44);
-putchar(32);
+putchar(',');
+putchar(' ');
+}
+else
+continue;
 }
 }
-}
-}
-putchar(10);
+putchar('\n');
+
 return (0);
 }
+
