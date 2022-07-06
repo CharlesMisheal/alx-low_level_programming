@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+/**
+* main - first 50 fibonacci number
+
+*
+
+* Return: 0 if successful
+
+*/
+
+int main(void)
+
+{
