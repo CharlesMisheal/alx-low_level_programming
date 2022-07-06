@@ -10,7 +10,7 @@ void print(int var)
 {
 if (var / 10)
 print(var / 10);
-_putchar('0' + (var % 10))
+_putchar('0' + (var % 10));
 }
 
 /**
