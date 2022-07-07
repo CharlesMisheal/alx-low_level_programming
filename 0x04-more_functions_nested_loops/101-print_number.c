@@ -10,26 +10,21 @@
 void print_number(int n)
 
 {
-unsigned int m, d, count;
+unsigned int nl;
 if (n < 0)
 
 {
-_putchar(45);
-m = n * -1;
+nl = -n;
+_putchar ('-');
 }
 else
 {
-m = n;
+nl = n;
 }
-d = m;
-count = 1;
-while (d > 9)
+if (nl / 10)
 {
-d /= 10;
-count *= 10;
+print_number(nl / 10);
 }
-for (; count >= 1; count /= 10)
-{
-_putchar(((m / count) % 10) + 48);
-}
+_putchar ((nl % 10) + '0');
+
 }
