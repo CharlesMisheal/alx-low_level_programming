@@ -5,7 +5,7 @@
 *
 * @c: character
 *
-* Return: 1 if it is uppercase
+* Return: something but success
 *
 */
 
@@ -13,12 +13,8 @@ int _isupper(int c)
 
 {
 
-if (isupper(c))
-{
-return (1);
+return (c >= 'A' && c <= 'Z');
 
-return (0);
-}
 }
 
 
