@@ -1,10 +1,10 @@
 nclude "main.h"
 
 /**
-*_strcat - concatenates two string
-* @dest: destination
-* @src: source
-* Return: pointer to dest
+*_strcat - a function that concatenates two string
+* @dest: first parameter
+* @src: second parameter
+* Return: a string
 */
 
 char *_strcat(char *dest, char *src)
