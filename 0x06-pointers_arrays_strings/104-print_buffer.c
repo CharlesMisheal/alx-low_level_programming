@@ -2,19 +2,63 @@
 
 #include <stdio.h>
 
+
 /**
-* main - This prints a buffer
-* Return: Always 0.
+* print_line - This prints a s bytes of a buffer
+* @c: buffer to print
+* @s: bytes of buffer to print
+* @l: line of buffer to print
 */
 
-int main(void)
+void print_line(char *c, int s, int l)
 
 {
 
-char buffer[] = "This is a string!\0And this is the rest of the #buffer :)\1\2\3\4\5\6\7#cisfun\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x20\x21\x34\x56#pointersarefun #infernumisfun\n";
+int j, k;
 
-printf("%s\n", buffer);
-printf("---------------------------------\n");
-print_buffer(buffer, sizeof(buffer));
-return (0);
+for (j = 0; j <= 9; j++)
+{
+if (j <= s)
+printf("%02x", c[l * 10 + j]);
+else
+printf("  ");
+if (j % 2)
+putchar(' ');
+}
+for (k = 0; k <= s; k++)
+{
+if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
+putchar(c[l * 10 + k]);
+else
+putchar('.');
+}
+}
+
+/**
+* print_buffer - prints a buffer
+* @b: buffer to print
+* @size: size of buffer
+*/
+
+void print_buffer(char *b, int size)
+
+{
+
+int i;
+for (i = 0; i <= (size - 1) / 10 && size; i++)
+{
+printf("%08x: ", i * 10);
+
+if (i < size / 10)
+{
+print_line(b, 9, i);
+}
+else
+{
+print_line(b, size % 10 - 1, i);
+}
+putchar('\n');
+}
+if (size == 0)
+putchar('\n');
 }
