@@ -1,6 +1,10 @@
 #ifndef MAIN_H
+
 #define MAIN_H
-int _putchar(char);
+
+
+
+int _putchar(char c);
 
 char *_strcat(char *dest, char *src);
 
@@ -12,9 +16,9 @@ int _strcmp(char *s1, char *s2);
 
 void reverse_array(int *a, int n);
 
-char *string_toupper(char *);
+char *string_toupper(char *p);
 
-char *cap_string(char *);
+char *cap_string(char *str);
 
 char *leet(char *);
 
@@ -25,4 +29,7 @@ void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
 void print_buffer(char *b, int size);
-#endif
+
+
+
+#endif/*MAIN_H*/
