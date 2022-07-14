@@ -1,22 +1,21 @@
-nclude "main.h"
+#include "main.h"
 
 /**
-* string_toupper - This Changes all lowercase letters to uppercase
-* @p: String to return
-* Return: String
+* string_toupper - This changes all lowercase leters
+* @s: string
+* Return: dest
 */
 
-char *string_toupper(char *p)
+char *string_toupper(char *s)
 
 {
 
-int i;
-for (i = 0; p[i] != '\0'; i++)
+int count = 0;
+while (*(s + count) != '\0')
 {
-if (p[i] >= 97 && p[i] <= 122)
-{
-p[i] = p[i] - 32;
+if ((*(s + count) >= 97) && (*(s + count) <= 122))
+*(s + count) = *(s + count) - 32;
+count++;
 }
-}
-return (p);
+return (s);
 }
